@@ -1,0 +1,230 @@
+/* src/styles/DocumentManagementPage.css */
+.management-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.management-content {
+    max-width: 1200px; /* Increased from 1000px to 1200px to give more space for the form */
+    margin: 40px auto;
+    padding: 80px; /* Increased padding for better spacing */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.management-content h2 {
+    color: #004A8F;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-section {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    color: #004A8F;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #004A8F;
+    outline: none;
+}
+
+.form-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-right: 12px;
+}
+
+.form-btn-primary {
+    background-color: #004A8F;
+    color: white;
+    border: none;
+}
+
+.form-btn-primary:hover {
+    background-color: #003A6F;
+}
+
+.form-btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+}
+
+.form-btn-secondary:hover {
+    background-color: #cccccc;
+}
+
+.form-btn-success {
+    background-color: #004A8F;
+    color: white;
+    border: none;
+}
+
+.form-btn-success:hover {
+    background-color: #003A6F;
+}
+
+.form-btn-danger {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+}
+
+.form-btn-danger:hover {
+    background-color: #d9363e;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Keep the 2-column layout */
+    gap: 20px; /* Increased gap for better spacing */
+    margin-bottom: 16px;
+}
+
+.form-link {
+    margin-top: 8px;
+}
+
+.form-document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.table {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: 500;
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-right: 8px;
+}
+
+.table-btn-warning {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.table-btn-warning:hover {
+    background-color: #e6b800;
+}
+
+.table-btn-danger {
+    background-color: #ff4d4f;
+    color: #fff;
+}
+
+.table-btn-danger:hover {
+    background-color: #d9363e;
+}
+
+@media (max-width: 1200px) {
+    .management-content {
+        max-width: 90%; /* Use a percentage for better responsiveness */
+        margin: 20px auto;
+        padding: 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .management-content {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 16px;
+    }
+
+    .management-content h2 {
+        font-size: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-btn {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table td,
+    .table th {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+/* Centralizar o modal vertical e horizontalmente */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    min-height: calc(100vh - 60px); /* Mantém a altura mínima para centralização vertical */
+    width: 100%; /* Garante que o modal use toda a largura disponível */
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  
+  /* Ajuste para o contêiner do modal */
+  .modal-dialog {
+    max-width: 90%; /* Ajuste conforme necessário para o tamanho do modal */
+    width: auto; /* Permite que o modal ajuste sua largura */
+  }
+  .custom-centered-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }

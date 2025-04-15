@@ -1,0 +1,46 @@
+/* src/styles/Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header-logo {
+    max-width: 140px;
+  }
+  
+  .logout-button {
+    background-color: #004A8F;
+    color: white;
+    border: none;
+    padding: 6px 14px; /* Reduzindo o padding para ser mais discreto */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px; /* Reduzindo o tamanho da fonte */
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #003A6F;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding: 12px 16px;
+    }
+  
+    .header-logo {
+      max-width: 120px;
+    }
+  
+    .logout-button {
+      padding: 5px 12px;
+      font-size: 12px;
+    }
+  }

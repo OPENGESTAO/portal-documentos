@@ -1,0 +1,214 @@
+/* src/styles/DashboardPage.css */
+.dashboard-container {
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden; /* evita rolagem lateral */
+}
+
+.dashboard-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.dashboard-title {
+  text-align: center;
+  color: #0056b3;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+h4 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.dashboard-header .category-btn.acessar-documentos {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1a3c6d;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  line-height: normal;
+  width: 100%;
+  max-width: 220px;
+}
+
+.dashboard-header .category-btn.acessar-documentos:hover {
+  background-color: #153258;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.notifications-container {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+  background-color: #f5f5f5;
+}
+
+.days-left {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.days-left.within-deadline {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.days-left.overdue {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .dashboard-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+
+  .dashboard-header .category-btn.acessar-documentos {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .notifications-container {
+    max-width: 100%;
+  }
+
+  .dashboard-header .category-btn.acessar-documentos {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .btn-icon {
+    font-size: 1rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

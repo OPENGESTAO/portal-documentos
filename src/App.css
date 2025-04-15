@@ -1,0 +1,58 @@
+/* src/App.css */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box; /* 👈 Evita problemas de padding quebrando o layout */
+}
+
+.auth-container h1 {
+  color: #004A8F; /* Azul da Open Gestão */
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Estilizando os botões do formulário de autenticação do Supabase */
+.auth-container .supabase-auth-ui_Button {
+  background-color: #004A8F !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.auth-container .supabase-auth-ui_Button:hover {
+  background-color: #003A6F !important;
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .auth-container h1 {
+    font-size: 18px;
+  }
+
+  .auth-container .supabase-auth-ui_Button {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+}
