@@ -191,10 +191,10 @@ const role = (form.elements.namedItem('role') as HTMLSelectElement).value;
 
         <div className="search-container">
           <button className="add-user-button" onClick={() => setShowAddModal(true)}>
-            <FaPlus /> Adicionar Usuário
+            {FaPlus({})} Adicionar Usuário
           </button>
           <div className="search-input-wrapper">
-            <FaSearch />
+          {FaSearch({})}
             <input
               type="text"
               placeholder="Buscar usuário..."
@@ -225,8 +225,8 @@ const role = (form.elements.namedItem('role') as HTMLSelectElement).value;
         <td>{user.role}</td>
         <td>{user.active ? 'Ativo' : 'Inativo'}</td>
         <td className="action-buttons">
-          <button onClick={() => handleEditUser(user)}><FaEdit /> Editar</button>
-          <button onClick={() => handleResetPassword(user)}><FaKey /> Redefinir Senha</button>
+          <button onClick={() => handleEditUser(user)}>{FaEdit({})} Editar</button>
+          <button onClick={() => handleResetPassword(user)}>{FaKey({})} Redefinir Senha</button>
           {user.active && (
             <button onClick={() => handleDeactivateUser(user)} className="deactivate-button">
               🚫 Desativar

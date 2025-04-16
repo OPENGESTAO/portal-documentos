@@ -1,10 +1,12 @@
 // src/pages/AdminPage.tsx
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaUsers, FaFileAlt, FaHistory, FaSearch } from 'react-icons/fa';
 import { supabase } from '../supabaseClient';
 import Header from '../components/Header';
 import '../styles/AdminPage.css';
+import { FaUsers, FaFileAlt, FaHistory, FaSearch } from 'react-icons/fa';
+
+
 
 export default function AdminPage() {
   const [permissions, setPermissions] = useState<string[]>([]);
@@ -57,22 +59,30 @@ export default function AdminPage() {
         <div className="admin-buttons">
           {hasPermission('manage_users') && (
             <Link to="/users">
-              <button><FaUsers /> Gerenciamento de Usuários</button>
+              <button>
+                <>{FaUsers({})}</> Gerenciamento de Usuários
+              </button>
             </Link>
           )}
           {hasPermission('manage_documents') && (
             <Link to="/documents">
-              <button><FaFileAlt /> Gerenciamento de Documentos</button>
+              <button>
+                <>{FaFileAlt({})}</> Gerenciamento de Documentos
+              </button>
             </Link>
           )}
           {hasPermission('view_logs') && (
             <Link to="/logs">
-              <button><FaHistory /> Logs do Sistema</button>
+              <button>
+                <>{FaHistory({})}</> Logs do Sistema
+              </button>
             </Link>
           )}
           {hasPermission('consult_clients') && (
             <Link to="/consult-clients">
-              <button><FaSearch /> Consultar Clientes</button>
+              <button>
+                <>{FaSearch({})}</> Consultar Clientes
+              </button>
             </Link>
           )}
         </div>

@@ -238,7 +238,7 @@ export default function LogsPage() {
         <div className="filters-container">
           <div className="search-container">
             <div className="search-input-wrapper">
-              <FaSearch />
+            {FaSearch({})}
               <input
                 type="text"
                 placeholder="Buscar logs (usuário, ação, cliente)..."

@@ -372,13 +372,13 @@ return (
                     onClick={() => toggleCategory(category.name)}
                   >
                     <span className="btn-icon">
-                      {category.name === "Imóveis" && <FaHome color="white" />}
-                      {category.name === "Veículos" && <FaCar color="white" />}
-                      {category.name === "Empresas e Participações" && <FaBuilding color="white" />}
-                      {category.name === "Contratos de Locações" && <FaFileContract color="white" />}
-                      {category.name === "Documentos Contábeis" && <FaChartBar color="white" />}
-                      {category.name === "Declarações de IRPF" && <FaMoneyBillWave color="white" />}
-                      {category.name === "Outros Documentos" && <FaFileAlt color="white" />}
+                      {category.name === "Imóveis" && FaHome({ color: "white" })}
+                      {category.name === "Veículos" && FaCar({ color: "white" })}
+                      {category.name === "Empresas e Participações" && FaBuilding({ color: "white" })}
+                      {category.name === "Contratos de Locações" && FaFileContract({ color: "white" })}
+                      {category.name === "Documentos Contábeis" && FaChartBar({ color:"white"})}
+                      {category.name === "Declarações de IRPF" && FaMoneyBillWave({ color: "white" })}
+                      {category.name === "Outros Documentos" && FaFileAlt({ color: "white" })}
                     </span>
                     {category.name}
                   </button>

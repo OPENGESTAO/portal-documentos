@@ -357,7 +357,8 @@ function DashboardPage() {
             onClick={handleAcessarDocumentos}
             title="Acessar Documentos"
           >
-            <FiFileText className="btn-icon" /> Acessar Documentos
+            <>{FiFileText({ className: "btn-icon" })}</> Acessar Documentos
+
           </button>
         </div>
         {loading ? (
