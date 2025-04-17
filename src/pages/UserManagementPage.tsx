@@ -68,7 +68,7 @@ export default function UserManagementPage() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return setError('Usuário logado não encontrado.');
 
-      const response = await fetch('https://proxy-backend-6ycn.onrender.com/api/create-user', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/create-user`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const role = (form.elements.namedItem('role') as HTMLSelectElement).value;
     ).map(input => input.value);
 
     try {
-      const response = await fetch('https://proxy-backend-6ycn.onrender.com/api/update-user', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/update-user`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ userId: selectedUser.id, email, role, name, phone, permissions })
@@ -136,7 +136,7 @@ const role = (form.elements.namedItem('role') as HTMLSelectElement).value;
     const newPassword = Math.random().toString(36).slice(-8) + 'A1!';
 
     try {
-      const response = await fetch('https://proxy-backend-6ycn.onrender.com/api/update-user', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/update-user`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ userId: user.id, password: newPassword })
@@ -160,7 +160,7 @@ const role = (form.elements.namedItem('role') as HTMLSelectElement).value;
     if (!token) return setError('Token não disponível.');
 
     try {
-      const response = await fetch('https://proxy-backend-6ycn.onrender.com/api/update-user', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/update-user`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ userId: user.id, active: false })
