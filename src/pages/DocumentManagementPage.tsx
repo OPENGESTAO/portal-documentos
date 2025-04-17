@@ -516,7 +516,7 @@ const DocumentManagementPage: React.FC = () => {
         valor_mercado: documentFields["Valor de Mercado"] || null,
       };
       const logData = {
-        usuario: user.email,
+        usuario: user.id,
         action: acao,
         table_name: "documentos",
         cliente: selectedCliente,
@@ -578,7 +578,7 @@ const DocumentManagementPage: React.FC = () => {
             const { data: insertedDoc, error: insertError } = await supabase
               .from("documentos")
               .insert({
-                usuario: user.email,
+                usuario: user.id,
                 cliente: selectedCliente,
                 categoria: category,
                 tipodocumento: doc.tipodocumento,
@@ -647,7 +647,7 @@ const DocumentManagementPage: React.FC = () => {
         alert("Documento atualizado com sucesso!");
       } else if (selectedFile && !documentsToAdd.length) {
         const documentData = {
-          usuario: user.email,
+          usuario: user.id,
           cliente: selectedCliente,
           categoria: category,
           tipodocumento:
