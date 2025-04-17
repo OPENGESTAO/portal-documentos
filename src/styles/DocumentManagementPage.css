@@ -221,6 +221,8 @@
   .modal-dialog {
     max-width: 90%; /* Ajuste conforme necessário para o tamanho do modal */
     width: auto; /* Permite que o modal ajuste sua largura */
+    max-height: 90vh;
+  overflow-y: auto;
   }
   .custom-centered-modal {
     display: flex;

@@ -91,6 +91,14 @@ const DocumentManagementPage: React.FC = () => {
   const [documentsToAdd, setDocumentsToAdd] = useState<DocumentToAdd[]>([]);
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [loadingClientes, setLoadingClientes] = useState(false);
+  useEffect(() => {
+    if (showConfirmation) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+  }, [showConfirmation]);
+  
   const navigate = useNavigate();
   const [formattedValues, setFormattedValues] = useState<Record<string, string>>({});
 
@@ -198,6 +206,7 @@ const DocumentManagementPage: React.FC = () => {
     })));
   }, [selectedCliente]);
 
+     
   useEffect(() => {
     const fetchClientes = async () => {
       setLoadingClientes(true);

@@ -77,6 +77,7 @@ function App() {
           supabaseClient={supabase}
           providers={[]} // login com Google removido
           appearance={{ theme: ThemeSupa }}
+          showLinks={false}
           localization={{
             variables: {
               sign_in: { email_label: 'E-mail', password_label: 'Senha', button_label: 'Entrar' },
